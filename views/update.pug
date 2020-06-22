@@ -4,9 +4,11 @@ html(lang=ja)
         meta(charset="utf-8")
     body
         h1 メッセージを保存
-        form(action="update" method="POST")
+        form(action="update" method="POST" encType="multipart/form-data")
             input(type="text" name="username" placeholder="名前")
             br
             textarea(placeholder="メッセージ" name="message" rows="4" cols="40")
+            br
+            input(type="file" name="image")
             br
             button(type="submit") 送信
